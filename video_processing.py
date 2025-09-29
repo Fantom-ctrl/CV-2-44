@@ -34,7 +34,7 @@ def draw_rectangles(frame, mask, min_area = 100):
         min_area (int): Минимальная площадь контура для фильтрации шума.
 
     Возвращает:
-        np.ndarray: Кадр с нарисованными прямоугольниками.
+        frame (np.ndarray): Кадр с нарисованными прямоугольниками.
     """
     contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     for cnt in contours:
